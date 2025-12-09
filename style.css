@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap'); /* Importa a fonte Quicksand do Google Fonts */
+
+* {
+    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total do elemento */
+}
+
+:root {
+    /* Cores Vibrantes (Neon) */
+    --primary-color: #00f2ff; /* Ciano Elétrico (estilo Arc Reactor) */
+    --secondary-color: #ffffff; /* Texto claro */
+    --tertiary-color: #ff0055; /* Rosa/Vermelho vibrante para destaques */
+    --accent-color: #ffe600; /* Amarelo/Dourado para detalhes */
+    
+    /* Fundo Complexo */
+    --bg-dark: #0a0b1e;
+    --bg-light: #1a1c4b;
+}
+
+body {
+    margin: 0;
+    /* Gradiente complexo para dar profundidade */
+    background: radial-gradient(circle at 50% 10%, var(--bg-light), var(--bg-dark));
+    background-attachment: fixed; /* O fundo fica parado enquanto você rola */
+    color: var(--secondary-color);
+    font-family: "Quicksand", sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    /* Efeito de vidro fosco */
+    background: rgba(10, 11, 30, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 242, 255, 0.2); /* Borda sutil ciano */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    /* ... mantenha o padding, display, etc do seu código original ... */
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    gap: 1rem;
+}
+
+#Menu {
+    font-size: 2rem;
+    background: linear-gradient(90deg, var(--primary-color), var(--tertiary-color));
+    background-clip: text; /* Padrão para navegadores modernos */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Texto degradê */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+div input {
+    background: rgba(255, 255, 255, 0.1); /* Fundo translúcido */
+    border: 2px solid var(--primary-color);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.2); /* Brilho neon suave */
+    /* ... mantenha os paddings e width do seu original ... */
+    padding: 0.375rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    width: 30rem;
+    margin-right: .5rem;
+}
+
+div input::placeholder {
+    font-size: 1.2rem; /* Tamanho da fonte do placeholder */
+    font-weight: 300; /* Peso da fonte do placeholder */
+    color: var(--tertiary-color); /* Cor do texto do placeholder */
+}
+
+div input:focus {
+    outline: none;
+    box-shadow: 0 0 20px var(--primary-color); /* Brilho forte ao focar */
+    background: rgba(0, 242, 255, 0.05);
+}
+
+#botao-busca {
+    background: var(--tertiary-color);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    /* ... resto das propriedades ... */
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+#botao-busca:hover {
+    background: var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+    transform: translateY(-2px);
+}
+
+#botao-busca:active {
+    transform: scale(0.98); /* Efeito de clique (diminui o tamanho) */
+}
+
+main {
+    overflow-y: scroll; /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura */
+    max-width: 80rem; /* Largura máxima do conteúdo principal */
+    margin: 0 auto; /* Centraliza o conteúdo principal horizontalmente */
+    margin-top: 2rem; /* Margem no topo */
+    height: calc(100vh - 10rem - 4rem); /* Calcula a altura para preencher o espaço restante da tela */
+    /* Customização da barra de rolagem para Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--bg-dark);
+}
+
+article {
+    background: rgba(255, 255, 255, 0.05); /* Vidro bem transparente */
+    backdrop-filter: blur(5px); /* Desfoque do fundo atrás do card */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+    border: 4px solid var(--primary-color); /* Detalhe lateral colorido */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+article:hover {
+    transform: scale(1.0) translateY(-0.5px);
+    border-color: var(--tertiary-color); /* Muda cor ao passar mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 
+                0 0 15px 0 var(--tertiary-color); /* Brilho neon externo */
+    background: rgba(255, 255, 255, 0.1);
+}
+
+article h2 {
+    color: var(--primary-color);
+    text-shadow: 0 0 5px rgba(0, 242, 255, 0.5); /* Texto brilhante */
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+article p {
+    margin: 0.5rem 0; /* Margem superior e inferior */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+    font-size: 1rem; /* Tamanho da fonte */
+    margin-bottom: 0.5rem; /* Margem inferior */
+    color: var(--secondary-color); /* Cor do texto */
+}
+
+article p strong {
+    color: var(--accent-color); /* Dourado para destacar rótulos */
+}
+
+article a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: linear-gradient(45deg, var(--primary-color), transparent);
+    color: #fff;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: width 0.3s;
+}
+
+article a:hover {
+    background: var(--tertiary-color);
+    text-decoration: none;
+}
+
+.footer {
+    position: absolute; /* Posicionamento absoluto em relação ao elemento pai posicionado */
+    bottom: 0; /* Alinha na parte inferior */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Largura total */
+    color: var(--tertiary-color); /* Cor do texto */
+    background-color: var(--bg-color); /* Cor de fundo */
+    padding: 15px 20px; /* Espaçamento interno */
+    border-top: 1px solid #3c4043; /* Borda superior */
+    font-size: 0.8rem; /* Tamanho da fonte */
+}
+
+.footer-location {
+    color: #9aa0a6; /* Cor do texto */
+    margin-bottom: 10px; /* Margem inferior */
+}
+
+.footer-links {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Habilita o layout flexbox */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 15px; /* Espaçamento entre os links */
+}
+
+.footer-links a {
+    color: var(--secondary-color); /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.2s; /* Transição suave para a cor */
+}
+
+.footer-links a:hover {
+    color: var(--accent-color); /* Muda a cor do link ao passar o mouse (variável não definida) */
+}
+
+@media (max-width: 768px) {
+    header { /* Estilos para telas com largura máxima de 768px */
+        flex-direction: column; /* Organiza os itens do cabeçalho em coluna */
+        padding: 1rem; /* Reduz o espaçamento interno */
+    }
+
+    header h1 { /* Estilos para o h1 no cabeçalho em telas menores */
+        text-align: center; /* Centraliza o texto */
+        margin-bottom: 1rem; /* Adiciona margem inferior */
+    }
+
+    div input { /* Estilos para o input em telas menores */
+        width: 90vw; /* Largura baseada na largura da viewport */
+        font-size: 1.2rem; /* Reduz o tamanho da fonte */
+    }
+
+    main { /* Estilos para o main em telas menores */
+        padding: 0 1rem; /* Adiciona espaçamento lateral */
+    }
+
+    article:hover { /* Estilos para o article em telas menores */
+        transform: none; /* Remove o efeito de escala ao passar o mouse */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 { /* Estilos para o h1 em telas com largura máxima de 480px */
+        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte */
+        max-width: 70%; /* Define uma largura máxima */
+        word-wrap: break-word; /* Permite a quebra de palavras longas */
+    }
+
+    div input, /* Estilos para o input e seu placeholder em telas muito pequenas */
+    div input::placeholder {
+        font-size: 1rem; /* Reduz o tamanho da fonte */
+    }
+
+    article h2 { /* Estilos para o h2 do article em telas muito pequenas */
+        font-size: 1.3rem; /* Reduz o tamanho da fonte */
+    }
+
+    div { /* Estilos para a div do cabeçalho em telas muito pequenas */
+        display: flex; /* Habilita flexbox */
+        align-items: center; /* Alinha itens ao centro */
+        justify-content: center; /* Centraliza itens */
+        flex-direction: column; /* Organiza em coluna */
+        gap: 0.5rem; /* Espaçamento entre os itens */
+    }
+
+    .footer { /* Estilos para o rodapé em telas muito pequenas */
+        display: none; /* Oculta o rodapé */
+    }
+
+    button { /* Estilos para o botão em telas muito pequenas */
+        margin-top: 1rem; /* Adiciona margem no topo */
+    }
+}
+
+/* Customização da barra de rolagem para navegadores WebKit (Chrome, Safari, Edge) */
+main::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+}
+
+main::-webkit-scrollbar-track {
+    background: var(--bg-dark); /* Cor do fundo da trilha (a parte fixa) */
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color); /* Cor da barra que se move */
+    border-radius: 20px; /* Bordas arredondadas */
+    border: 3px solid var(--bg-dark); /* Espaçamento ao redor da barra */
+}
+
+main::-webkit-scrollbar-thumb:hover {
+    background-color: var(--tertiary-color); /* Muda a cor ao passar o mouse */
+}

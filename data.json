@@ -1,0 +1,62 @@
+[
+    {
+        "nome": "Homem de Ferro",
+        "primeira": 1963,
+        "descricao": "Gênio. Bilionário. Filantropo. A confiança de Tony Stark só é comparável às suas incríveis habilidades como o herói conhecido como Homem de Ferro.",
+        "link": "https://www.marvel.com/characters/iron-man-tony-stark/on-screen/profile"
+    },
+    {
+        "nome": "Capitão América",
+        "primeira": 1941,
+        "descricao": "Um supersoldado da Segunda Guerra Mundial, Steve Rogers é um herói fora de seu tempo, lutando pela justiça como o Capitão América.",
+        "link": "https://www.marvel.com/characters/captain-america-steve-rogers"
+    },
+    {
+        "nome": "Thor",
+        "primeira": 1962,
+        "descricao": "O deus nórdico do trovão, Thor Odinson empunha seu martelo Mjolnir para proteger tanto Asgard quanto a Terra.",
+        "link": "https://www.marvel.com/characters/thor-thor-odinson"
+    },
+    {
+        "nome": "Hulk",
+        "primeira": 1962,
+        "descricao": "Exposto a raios gama, o cientista Bruce Banner se transforma na criatura incrivelmente forte e de pele verde conhecida como Hulk sempre que fica com raiva.",
+        "link": "https://www.marvel.com/characters/hulk-bruce-banner"
+    },
+    {
+        "nome": "Homem-Aranha",
+        "primeira": 1962,
+        "descricao": "Picado por uma aranha radioativa, o jovem Peter Parker ganha habilidades aracnídeas e aprende que com grandes poderes vêm grandes responsabilidades.",
+        "link": "https://www.marvel.com/characters/spider-man-peter-parker"
+    },
+    {
+        "nome": "Superman",
+        "primeira": 1938,
+        "descricao": "Enviado à Terra do planeta Krypton quando bebê, Kal-El foi criado como Clark Kent e usa seus incríveis poderes para proteger a humanidade como Superman.",
+        "link": "https://www.dc.com/characters/superman"
+    },
+    {
+        "nome": "Batman",
+        "primeira": 1939,
+        "descricao": "Após testemunhar o assassinato de seus pais, o bilionário Bruce Wayne treinou até a perfeição física e intelectual para combater o crime em Gotham City como o vigilante Batman.",
+        "link": "https://www.dc.com/characters/batman"
+    },
+    {
+        "nome": "Mulher-Maravilha",
+        "primeira": 1941,
+        "descricao": "Princesa amazona e embaixadora da paz, Diana de Themyscira é uma das mais poderosas defensoras da justiça, conhecida como Mulher-Maravilha.",
+        "link": "https://www.dc.com/characters/wonder-woman"
+    },
+    {
+        "nome": "Flash",
+        "primeira": 1940,
+        "descricao": "Conhecido como o homem mais rápido do mundo, o velocista escarlate usa sua supervelocidade para combater o crime e proteger os inocentes.",
+        "link": "https://www.dc.com/characters/the-flash"
+    },
+    {
+        "nome": "Lanterna Verde",
+        "primeira": 1940,
+        "descricao": "Membro de uma tropa intergaláctica, um Lanterna Verde usa um anel de poder que transforma seus pensamentos em realidade, limitado apenas pela sua força de vontade.",
+        "link": "https://www.dc.com/characters/green-lantern"
+    }
+]
