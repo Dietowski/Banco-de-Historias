@@ -17,11 +17,11 @@ function filtrarDados() {
     const termoBusca = campoBusca.value.trim().toLowerCase();
     
     // Verifica se o usuário está na index.html ou na raiz
-    const isIndex = window.location.pathname.endsWith("index.html") || window.location.pathname === "/";
+    const isIndex = window.location.pathname.endsWith("home.html") || window.location.pathname === "/paginas/";
 
     if (!isIndex) {
         // Redireciona para a index enviando o termo formatado para URL
-        window.location.href = `index.html?busca=${encodeURIComponent(termoBusca)}`;
+        window.location.href = `/paginas/git adhome.html?busca=${encodeURIComponent(termoBusca)}`;
         return;
     }
 
