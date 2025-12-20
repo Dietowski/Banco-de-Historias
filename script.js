@@ -21,7 +21,7 @@ function filtrarDados() {
 
     if (!isIndex) {
         // Redireciona para a index enviando o termo formatado para URL
-        window.location.href = `/paginas/git adhome.html?busca=${encodeURIComponent(termoBusca)}`;
+        window.location.href = `/paginas/home.html?busca=${encodeURIComponent(termoBusca)}`;
         return;
     }
 
