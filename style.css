@@ -43,6 +43,7 @@ header {
     gap: 1rem;
 }
 
+
 #Menu {
     font-size: 2rem;
     background: linear-gradient(90deg, var(--primary-color), var(--tertiary-color));
@@ -167,6 +168,14 @@ article a:hover {
     text-decoration: none;
 }
 
+#imagem {
+  display: flex;
+  align-self: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+  justify-self: center;
+  height: 50vh; /* Exemplo: altura da tela */
+}
+
 .footer {
     position: absolute; /* Posicionamento absoluto em relação ao elemento pai posicionado */
     bottom: 0; /* Alinha na parte inferior */
@@ -200,6 +209,71 @@ article a:hover {
 
 .footer-links a:hover {
     color: var(--accent-color); /* Muda a cor do link ao passar o mouse (variável não definida) */
+}
+
+.card-row {
+    display: grid;
+    /* Cria 4 colunas de tamanhos iguais (1fr) */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; /* Espaço entre os cards */
+    padding: 20px;
+    width: 100%;
+}
+
+.card-row-item {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Garante que o botão fique sempre no final */
+    transition: all 0.3s ease;
+    text-align: center;
+    height: 100%; /* Faz todos os cards da linha terem a mesma altura */
+}
+
+.card-row-item:hover {
+    transform: scale(1.0) translateY(-0.5px);
+    border-color: var(--tertiary-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5),
+                0 0 15px 0 var(--tertiary-color);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* 2. Padroniza a Imagem (Garante que nunca fiquem gigantes) */
+.imagem-card {
+    width: 100%;
+    height: 200px;      /* Altura fixa para padronização total */
+    object-fit: cover;  /* Corta a imagem sem esticar para preencher o espaço */
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 3. Estiliza o Botão do Card (Igual ao botão de Busca) */
+.botao-card {
+    display: inline-block;
+    background: var(--tertiary-color);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none; /* Remove o sublinhado de link */
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%; /* Opcional: faz o botão ocupar a largura do card */
+}
+
+.botao-card:hover {
+    background: var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+    transform: translateY(-2px);
+    color: white;
 }
 
 @media (max-width: 768px) {
@@ -277,4 +351,12 @@ main::-webkit-scrollbar-thumb {
 
 main::-webkit-scrollbar-thumb:hover {
     background-color: var(--tertiary-color); /* Muda a cor ao passar o mouse */
+}
+
+@media (max-width: 1024px) {
+    .card-row { grid-template-columns: repeat(2, 1fr); } /* 2 por linha em tablets */
+}
+
+@media (max-width: 600px) {
+    .card-row { grid-template-columns: 1fr; } /* 1 por linha em celulares */
 }
